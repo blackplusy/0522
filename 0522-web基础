@@ -60,3 +60,53 @@
 			pc端      笔记本  台式  服务器 
 			移动端    手机    ipad  智能终端
 		s:服务器
+2.访问网站的过程	
+	1.浏览器中输入www.sina.com.cn
+	2.系统会到hosts文件中搜索是否有www.sina.com.cn对应的IP地址，如果有直接访问
+	3.如果没有，数据通过网络传输到DNS(域名解析)服务器，解析域名为IP
+	4.数据通过网络传输到目标IP的web服务器中进行解析
+	5.web服务器发送请求给数据库服务器，数据库服务器进行响应
+	6.web服务器整合资源后发回给浏览器
+3.b/s架构的后台
+	操作系统
+		unix
+		linux
+		windows
+	web服务器
+		apache 不支持java
+		tomcat java
+		nginx  轻量级web服务器(负载均衡\反向代理)
+		iis    微软
+	数据库服务器
+		oracle
+		mysql
+		sqlserver
+	b/s架构后端常见搭配
+		系统                      web服务器                数据库服务器
+		win                         iis                      sqlserver
+		                          apache                     mysql
+		                          tomcat                     mysql/oracle
+		linux                     apache                     mysql          （LAMP）
+		                          nginx                      mysql           (LNMP)
+		                          tomcat                     mysql/oracle
+4.ecshop项目的部署
+	a.下载phpstudy2016
+	http://www.xue51.com/soft/6925.html
+	b.安装
+	c.检查服务和端口
+		1>检查进程
+			win+r--cmd--tasklist | find "httpd"
+			tasklist  查看当前系统的所有进程
+			|         管道,前面的输出作为后面的输入
+			find      搜索
+			apache的进程   httpd.exe
+			mysql的进程    mysqld.exe
+		2>检查端口
+			win+r--cmd--netstat -an | find "3306"
+			netstat -an  查看系统中开放的所有端口
+			3306      mysql的端口信息
+			80        apache的端口信息
+		3>补充
+			0.0.0.0  任意IP
+			127.0.0.1
+			localhost  电脑本机
