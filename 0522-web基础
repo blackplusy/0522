@@ -110,3 +110,26 @@
 			0.0.0.0  任意IP
 			127.0.0.1
 			localhost  电脑本机
+	d.ecshop环境
+		开发语言:	php
+		web服务器:	apache
+		数据库服务器:mysql
+	e.解压ecshop压缩包到phpstudy的安装文件夹下的WWW文件夹
+	f.通过浏览器访问127.0.0.1/ecshop1按照提示进行安装
+		配置系统
+		数据库账号
+			数据库主机 localhost
+			端口号     3306
+			用户名     root
+			密码       root
+			数据库名   test
+	g.补充
+		phpstudy的文件夹结构
+			apache 		web服务器存放的位置
+				bin     存放apache命令的位置
+				conf    存放apache配置文件的位置
+				logs    存放apache日志文件的位置
+			mysql   	数据库服务器存放位置
+			    bin     存放mysql命令的位置
+			    data    存放mysql数据的位置
+			WWW         项目代码存放位置
